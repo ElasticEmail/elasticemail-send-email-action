@@ -1,0 +1,43 @@
+name: 'Elastic Email Notification'
+description: 'Send email notifications via Elastic Email API v4 based on workflow outcomes'
+author: 'Elastic Email'
+branding:
+  icon: 'mail'
+  color: 'blue'
+
+inputs:
+  api_key:
+    description: 'Elastic Email API Key (store in GitHub Secrets)'
+    required: true
+  to:
+    description: 'Recipient email address(es). For multiple recipients, use a comma-separated list'
+    required: true
+  subject:
+    description: 'Email subject line'
+    required: true
+  status:
+    description: 'Workflow status (success, failure, cancelled)'
+    required: true
+  body_type:
+    description: 'Email body type: HTML or PlainText'
+    required: false
+    default: 'HTML'
+  body:
+    description: 'Custom email body content. If not provided, auto-generated based on status'
+    required: false
+    default: ''
+  from_email:
+    description: "Verified email address to send from"
+    required: true
+  from_name:
+    description: 'Sender name'
+    required: false
+    default: 'GitHub Actions'
+
+outputs:
+  message_id:
+    description: 'Elastic Email transaction ID for the sent email'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

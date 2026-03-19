@@ -1,0 +1,19 @@
+name: Real Multi-Recipient Test
+on: [push, workflow_dispatch]
+
+jobs:
+  test_multi_recipients:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Send Multi-Recipient Email
+        uses: ./
+        with:
+          api_key: ${{ secrets.ELASTIC_EMAIL_API_KEY }}
+          to: "test1@example.com, test2@example.com"
+          from_email: "muzammil.malik@elasticemail.com"
+          subject: "Elastic Email Action - Multi-Recipient Test"
+          status: "success"
+          from_name: "Elastic Email Tester"
