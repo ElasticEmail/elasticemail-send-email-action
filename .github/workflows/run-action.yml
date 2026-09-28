@@ -1,19 +1,41 @@
-name: Real Multi-Recipient Test
-on: [push, workflow_dispatch]
+name: Send test email
+
+# Manual end-to-end check against the real Elastic Email API.
+# Requires the ELASTIC_EMAIL_API_KEY repository secret.
+on:
+  workflow_dispatch:
+    inputs:
+      to:
+        description: "Recipient(s), comma-separated"
+        required: true
+      from_email:
+        description: "Sender address on a verified domain"
+        required: true
+      status:
+        description: "Workflow status to render"
+        type: choice
+        options: [success, failure, cancelled]
+        default: success
 
 jobs:
-  test_multi_recipients:
+  send:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Send Multi-Recipient Email
+      - name: Send email
+        id: send
         uses: ./
         with:
           api_key: ${{ secrets.ELASTIC_EMAIL_API_KEY }}
-          to: "test1@example.com, test2@example.com"
-          from_email: "muzammil.malik@elasticemail.com"
-          subject: "Elastic Email Action - Multi-Recipient Test"
-          status: "success"
-          from_name: "Elastic Email Tester"
+          to: ${{ inputs.to }}
+          from_email: ${{ inputs.from_email }}
+          from_name: "Elastic Email Action Test"
+          subject: "Elastic Email Action - test (${{ inputs.status }})"
+          status: ${{ inputs.status }}
+
+      - name: Print transaction ID
+        env:
+          MESSAGE_ID: ${{ steps.send.outputs.message_id }}
+        run: echo "Transaction ID $MESSAGE_ID"

@@ -27,7 +27,7 @@ inputs:
     required: false
     default: ''
   from_email:
-    description: "Verified email address to send from"
+    description: 'Sender email address. Must use a domain verified in your Elastic Email account'
     required: true
   from_name:
     description: 'Sender name'
@@ -39,5 +39,5 @@ outputs:
     description: 'Elastic Email transaction ID for the sent email'
 
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.js'
