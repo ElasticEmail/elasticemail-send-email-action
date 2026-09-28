@@ -1,4 +1,4 @@
-name: 'Elastic Email Notification'
+name: 'Elastic Email Send Email'
 description: 'Send email notifications via Elastic Email API v4 based on workflow outcomes'
 author: 'Elastic Email'
 branding:

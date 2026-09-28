@@ -19,9 +19,9 @@ If you add or rename an input, update `action.yml`, `src/main.js` and the [READM
 
 ## Reporting bugs
 
-Search [existing issues](https://github.com/ElasticEmail/send-email-action/issues) first. If nothing matches, open a new issue using the **Bug report** template and include:
+Search [existing issues](https://github.com/ElasticEmail/elasticemail-send-email-action/issues) first. If nothing matches, open a new issue using the **Bug report** template and include:
 
-- The version you're using (e.g. `ElasticEmail/send-email-action@v1.0.0`)
+- The version you're using (e.g. `ElasticEmail/elasticemail-send-email-action@v1.0.0`)
 - The runner (e.g. `ubuntu-latest`, self-hosted)
 - The step's `with:` block, with the API key removed
 - The step's log output
@@ -45,8 +45,8 @@ Please do **not** report security vulnerabilities in public issues. See [SECURIT
 Requirements: [Node.js](https://nodejs.org/) 24 or later.
 
 ```bash
-git clone https://github.com/ElasticEmail/send-email-action.git
-cd send-email-action
+git clone https://github.com/ElasticEmail/elasticemail-send-email-action.git
+cd elasticemail-send-email-action
 npm ci
 npm test
 npm run build

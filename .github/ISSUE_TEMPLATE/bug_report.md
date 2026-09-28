@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a problem with the Send Email Action
+about: Report a problem with the Elastic Email Send Email Action
 title: "[Bug] "
 labels: bug
 assignees: ''

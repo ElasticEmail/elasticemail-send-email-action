@@ -1,5 +1,5 @@
 {
-  "name": "send-email-action",
+  "name": "elasticemail-send-email-action",
   "version": "1.0.0",
   "private": true,
   "description": "Official GitHub Action for sending emails via Elastic Email API v4",
@@ -12,11 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ElasticEmail/send-email-action.git"
+    "url": "git+https://github.com/ElasticEmail/elasticemail-send-email-action.git"
   },
-  "homepage": "https://github.com/ElasticEmail/send-email-action#readme",
+  "homepage": "https://github.com/ElasticEmail/elasticemail-send-email-action#readme",
   "bugs": {
-    "url": "https://github.com/ElasticEmail/send-email-action/issues"
+    "url": "https://github.com/ElasticEmail/elasticemail-send-email-action/issues"
   },
   "keywords": [
     "github-actions",

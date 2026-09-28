@@ -6,16 +6,16 @@
 
 The official GitHub Action for sending email notifications from your workflows through the [Elastic Email](https://elasticemail.com) REST API v4.
 
-[![GitHub Action](https://img.shields.io/badge/GitHub%20Action-send--email--action-2088FF?logo=githubactions&logoColor=white)](action.yml)
+[![GitHub Action](https://img.shields.io/badge/GitHub%20Action-elasticemail--send--email--action-2088FF?logo=githubactions&logoColor=white)](action.yml)
 [![Node.js](https://img.shields.io/badge/runtime-node24-339933?logo=nodedotjs&logoColor=white)](action.yml)
 [![API](https://img.shields.io/badge/API-v4-0A7BBB)](https://elasticemail.com/developers/api-documentation/rest-api)
-[![Test](https://github.com/ElasticEmail/send-email-action/actions/workflows/test.yml/badge.svg)](https://github.com/ElasticEmail/send-email-action/actions/workflows/test.yml)
-[![License: MIT](https://img.shields.io/github/license/ElasticEmail/send-email-action?color=yellow)](LICENSE)
+[![Test](https://github.com/ElasticEmail/elasticemail-send-email-action/actions/workflows/test.yml/badge.svg)](https://github.com/ElasticEmail/elasticemail-send-email-action/actions/workflows/test.yml)
+[![License: MIT](https://img.shields.io/github/license/ElasticEmail/elasticemail-send-email-action?color=yellow)](LICENSE)
 
-[![Latest release](https://img.shields.io/github/v/release/ElasticEmail/send-email-action?logo=github&label=release)](https://github.com/ElasticEmail/send-email-action/releases)
-[![Last commit](https://img.shields.io/github/last-commit/ElasticEmail/send-email-action?logo=github)](https://github.com/ElasticEmail/send-email-action/commits/main)
-[![Open issues](https://img.shields.io/github/issues/ElasticEmail/send-email-action?logo=github)](https://github.com/ElasticEmail/send-email-action/issues)
-[![GitHub stars](https://img.shields.io/github/stars/ElasticEmail/send-email-action?style=flat&logo=github)](https://github.com/ElasticEmail/send-email-action/stargazers)
+[![Latest release](https://img.shields.io/github/v/release/ElasticEmail/elasticemail-send-email-action?logo=github&label=release)](https://github.com/ElasticEmail/elasticemail-send-email-action/releases)
+[![Last commit](https://img.shields.io/github/last-commit/ElasticEmail/elasticemail-send-email-action?logo=github)](https://github.com/ElasticEmail/elasticemail-send-email-action/commits/main)
+[![Open issues](https://img.shields.io/github/issues/ElasticEmail/elasticemail-send-email-action?logo=github)](https://github.com/ElasticEmail/elasticemail-send-email-action/issues)
+[![GitHub stars](https://img.shields.io/github/stars/ElasticEmail/elasticemail-send-email-action?style=flat&logo=github)](https://github.com/ElasticEmail/elasticemail-send-email-action/stargazers)
 
 [Setup](#setup) •
 [Quick start](#quick-start) •
@@ -77,7 +77,7 @@ jobs:
 
       - name: Email the team if the build fails
         if: failure()
-        uses: ElasticEmail/send-email-action@v1
+        uses: ElasticEmail/elasticemail-send-email-action@v1
         with:
           api_key: ${{ secrets.ELASTIC_EMAIL_API_KEY }}
           from_email: ci@yourdomain.com
@@ -91,7 +91,7 @@ jobs:
 ```yaml
       - name: Deployment notification
         if: always()
-        uses: ElasticEmail/send-email-action@v1
+        uses: ElasticEmail/elasticemail-send-email-action@v1
         with:
           api_key: ${{ secrets.ELASTIC_EMAIL_API_KEY }}
           from_email: deploy@yourdomain.com
@@ -105,7 +105,7 @@ jobs:
 
 ```yaml
       - name: Custom notification
-        uses: ElasticEmail/send-email-action@v1
+        uses: ElasticEmail/elasticemail-send-email-action@v1
         with:
           api_key: ${{ secrets.ELASTIC_EMAIL_API_KEY }}
           from_email: ci@yourdomain.com
@@ -127,7 +127,7 @@ jobs:
 ```yaml
       - name: Send email
         id: email
-        uses: ElasticEmail/send-email-action@v1
+        uses: ElasticEmail/elasticemail-send-email-action@v1
         with:
           api_key: ${{ secrets.ELASTIC_EMAIL_API_KEY }}
           from_email: ci@yourdomain.com
@@ -181,7 +181,7 @@ More complete, runnable samples are in the **[Elastic Email examples repository]
 ```yaml
       - name: Notify on cancel
         if: cancelled()
-        uses: ElasticEmail/send-email-action@v1
+        uses: ElasticEmail/elasticemail-send-email-action@v1
         with:
           api_key: ${{ secrets.ELASTIC_EMAIL_API_KEY }}
           from_email: ci@yourdomain.com
@@ -250,7 +250,7 @@ GitHub runs `dist/index.js` directly, so commit the rebuilt `dist/` with every s
 
 ## Versioning
 
-Releases follow [semantic versioning](https://semver.org) and are listed in [GitHub Releases](https://github.com/ElasticEmail/send-email-action/releases). Pin `@v1` to get fixes and features within the major version, or pin an exact tag such as `@v1.0.0`.
+Releases follow [semantic versioning](https://semver.org) and are listed in [GitHub Releases](https://github.com/ElasticEmail/elasticemail-send-email-action/releases). Pin `@v1` to get fixes and features within the major version, or pin an exact tag such as `@v1.0.0`.
 
 <details>
 <summary>Build details</summary>
@@ -266,8 +266,8 @@ Releases follow [semantic versioning](https://semver.org) and are listed in [Git
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
-- 🐛 [Report a bug](https://github.com/ElasticEmail/send-email-action/issues/new?template=bug_report.md)
-- 💡 [Request a feature](https://github.com/ElasticEmail/send-email-action/issues/new?template=feature_request.md)
+- 🐛 [Report a bug](https://github.com/ElasticEmail/elasticemail-send-email-action/issues/new?template=bug_report.md)
+- 💡 [Request a feature](https://github.com/ElasticEmail/elasticemail-send-email-action/issues/new?template=feature_request.md)
 - 🔒 [Report a security issue](SECURITY.md)
 
 This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
@@ -280,7 +280,7 @@ This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.
 - 💬 [Chat with support on elasticemail.com](https://elasticemail.com) (preferred)
 - 📚 [API documentation](https://elasticemail.com/developers/api-documentation/rest-api)
 - 🧪 [Examples repository](https://github.com/ElasticEmail/elasticemail-examples)
-- 🐛 [GitHub issues](https://github.com/ElasticEmail/send-email-action/issues), for bugs in this action only
+- 🐛 [GitHub issues](https://github.com/ElasticEmail/elasticemail-send-email-action/issues), for bugs in this action only
 
 ## License
 

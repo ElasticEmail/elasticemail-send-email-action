@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Security fixes are released for the latest [release](https://github.com/ElasticEmail/send-email-action/releases) of this action and published under the `v1` tag. Please update to the latest version before reporting an issue.
+Security fixes are released for the latest [release](https://github.com/ElasticEmail/elasticemail-send-email-action/releases) of this action and published under the `v1` tag. Please update to the latest version before reporting an issue.
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -14,8 +14,8 @@ Security fixes are released for the latest [release](https://github.com/ElasticE
 
 Report them privately by one of these methods:
 
-- [GitHub private vulnerability reporting](https://github.com/ElasticEmail/send-email-action/security/advisories/new)
-- Email **integrations@elasticemail.com** with the subject `Security: send-email-action`
+- [GitHub private vulnerability reporting](https://github.com/ElasticEmail/elasticemail-send-email-action/security/advisories/new)
+- Email **integrations@elasticemail.com** with the subject `Security: elasticemail-send-email-action`
 
 Please include:
 
