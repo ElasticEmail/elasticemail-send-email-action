@@ -205,7 +205,7 @@ GitHub masks secrets in logs, and the action never prints the key.
 The action sends one request to the Elastic Email API v4 per step, with a **30 second** timeout. Your account's sending limits and the API's limits apply:
 
 - Up to **20 concurrent connections** per account
-- A hard timeout of **600 seconds** per request on the API side
+- A request with no response for about **50 seconds** fails on the API side with a gateway error (`5xx`)
 
 ## Troubleshooting
 
